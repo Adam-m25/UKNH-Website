@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Kworora Nursing Home (UKNH)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(to right, #4CAF50, #2e7d32);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        .working-hours {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 1em;
+        }
+
+        nav {
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #4CAF50;
+        }
+
+        .hero {
+            background: url('https://via.placeholder.com/1600x600') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero a {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .hero a:hover {
+            background: #388E3C;
+        }
+
+        section {
+            padding: 40px 20px;
+        }
+
+        .services, .about {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card img {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-container label {
+            font-weight: bold;
+        }
+
+        .form-container input, .form-container textarea, .form-container select, .form-container button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .form-container button {
+            background: #4CAF50;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .form-container button:hover {
+            background: #388E3C;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        footer div {
+            width: 30%;
+        }
+
+        footer h4 {
+            margin-bottom: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 5px;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer ul li a:hover {
+            color: #4CAF50;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+        }
+
+        .emergency-call {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: red;
+            color: white;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .emergency-call:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Universal Kworora Nursing Home (UKNH)</h1>
+        <p>Your Trusted Healthcare Partner in Ntungamo</p>
+        <div class="working-hours">Open 24 Hours</div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#booking">Book Appointment</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="hero">
+        <div>
+            <h2>Care and Compassion at Every Step</h2>
+            <a href="#booking">Book an Appointment</a>
+        </div>
+    </div>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            Welcome to Universal Kworora Nursing Home (UKNH). We are dedicated to providing a comprehensive range of top-notch medical services. Our facility is equipped to handle Inpatient and Outpatient care, and we offer specialized services including Radiology, Laboratory tests, Dental care, Physiotherapy, Orthopedics, Eye care, and Pediatric services. We strive to deliver the highest standard of care to our community.
+        </p>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service-card">
+                <img src="https://via.placeholder.com/80" alt="Inpatient">
+                <h3>Inpatient/Outpatient</h3>
+                <p>Comprehensive care for both inpatient and outpatient services.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://via.placeholder.com/80" alt="Maternity">
+                <h3>Maternity</h3>
+                <p>Safe, supportive care for mothers and babies during and after childbirth.Manned by highly qualified professional staff with specialized certifications, UKNH maternity wing offer exceptional maternity services, obstetrics and gynecology specialized services. We have a state of the art hygienic facility that is well equipped.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://via.placeholder.com/80" alt="Radiology">
+                <h3>Radiology/Imaging</h3>
+                <p>Modern X-ray and scanning services for accurate diagnosis.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://via.placeholder.com/80" alt="Dental">
+                <h3>Dental</h3>
+                <p>UKNH is fully fledged a modern dental specialty services.Dental consultation and oral health education, extractions, fillings (conservations), root canal treatment, crowns and bridges,scaling and polishing
+                    (cleaning),dentures/teeth replacement or artificial teeth, fracture reductions.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://via.placeholder.com/80" alt="Physiotherapy">
+                <h3>Physiotherapy</h3>
+                <p>Rehabilitation services to help with recovery from injuries or surgery.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://via.placeholder.com/80" alt="Orthopedics">
+                <h3>Orthopedics</h3>
+                <p>Specialized care for bone and joint issues.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://via.placeholder.com/80" alt="Eye Clinic">
+                <h3>Eye Clinic</h3>
+                <p>Comprehensive and computerised eye care services including exams and treatment.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://via.placeholder.com/80" alt="Pediatrics">
+                <h3>Pediatrics</h3>
+                <p>Dedicated care for children, from routine checkups to specialized treatments.</p>
+            </div>
+            <div class="service-card">
+                <img src="https://via.placeholder.com/80" alt="Pharmacy">
+                <h3>Pharmacy</h3>
+                <p>At UKNH,we have an On-site pharmacy with a wide range of medicines and health products.Manned by highly qualified professional staff with specialized certifications, UKNH pharmacy prides in the quality of professional services offered to clients. The pharmacy is committed to providing effective services to both in-patients and out-patients, whilst ensuring that treatment is safe and appropriate. We dispense quality medicines at the best price possible. We employ qualified and experienced Doctors and Clinical Officers to ensure that our patients get the best medical advice and care. We have a fully fledged hospital Management System that improves on the speed of delivery of services. We also offer specialized clinics such as Gynecology, Dermatology, Orthopedic, Nephrology, Optical and ENT.</p>
+            </div>
+        </div>
+    </section>
+    <section id="booking">
+        <h2>Book an Appointment</h2>
+        <div class="form-container">
+            <form action="mailto:clinicuniversal@gmail.com" method="POST" enctype="text/plain">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="service">Service Required:</label>
+                <select id="service" name="service" required>
+                    <option value="Inpatient/Outpatient">Inpatient/Outpatient</option>
+                    <option value="Maternity">Maternity</option>
+                    <option value="Radiology">Radiology/Imaging</option>
+                    <option value="Dental">Dental</option>
+                    <option value="Physiotherapy">Physiotherapy</option>
+                    <option value="Orthopedics">Orthopedics</option>
+                    <option value="Eye Clinic">Eye Clinic</option>
+                    <option value="Pediatrics">Pediatrics</option>
+                    <option value="Pharmacy">Pharmacy</option>
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    <section id="feedback">
+        <h2>Feedback</h2>
+        <div class="form-container">
+            <form action="mailto:clinicuniversal@gmail.com" method="POST" enctype="text/plain">
+                <label for="feedback-name">Full Name:</label>
+                <input type="text" id="feedback-name" name="name" required>
+                <label for="feedback-phone">Phone Number:</label>
+                <input type="tel" id="feedback-phone" name="phone" required>
+                <label for="feedback">Your Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4" required></textarea>
+                <button type="submit">Send Feedback</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div>
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>Email: <a href="mailto:clinicuniversal@gmail.com">clinicuniversal@gmail.com</a></li>
+                    <li>Phone: <a href="tel:+256393236997">+256393236997</a> / <a href="tel:+256757726265">+256757726265</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Working Hours</h4>
+                <p>Open 24 Hours</p>
+            </div>
+            <div>
+                <h4>Location</h4>
+                <p>Plot 2c Old Kabale-Mbarara Rd, P.O Box 96 Ntungamo</p>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15959.669283045775!2d30.265668!3d-0.875484!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zMMKwNTMnMzEuOCJTIDMwwrAxNycwMC40IkU!5e0!3m2!1sen!2sug!4v1699800564196" 
+                    loading="lazy"></iframe>
+            </div>
+        </div>
+        <p style="text-align:center; color: white; margin-top: 20px;">© 2024 Universal Kworora Nursing Home. All rights reserved.</p>
+    </footer>
+    <button class="emergency-call" onclick="window.location.href='tel:+256393236997'">Emergency? Call Us</button>
+</body>
+</html>
